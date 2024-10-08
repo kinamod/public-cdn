@@ -1,488 +1,557 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Carnival Demonstration</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
-    <!-- Stylesheets from blackhat -->
-      <link rel="shortcut icon" href="https://www.blackhat.com/images/favicon2.ico" type="image/ico">
-      <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap-reboot.css">
-      <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap.css">
-      <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/theme.css">
-      <link rel="stylesheet" href="https://www.blackhat.com/css/informa-bar.css" type="text/css">
-      <link rel="stylesheet" href="https://www.blackhat.com/css/superfooter-2015b.css" type="text/css">
-    <!-- END blackhat stylesheets -->
-    <style>
-        html{
-    background: #20313b;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-    color: #d2d2d6;
-}
-
-html, body, .viewport {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-#app{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.content{
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-weight: lighter;
-}
-
-p {
-    text-align: center;
-}
-
-.section {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-weight: lighter;
-}
-
-.section h1,h2,h3,h4 {
-    margin: 5px;
-    text-align: center;
-}
-
-/*Pointlessly Pretty Button */
-
-a{
-    text-decoration: none;
-}
-
-.btn {
-    text-transform: uppercase;
-    position: relative;
-    font-weight: bold;
-    display: block;
-    margin: 30px auto;
-    padding: 0;
-
-    overflow: hidden;
-
-    border-width: 0;
-    outline: none;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-
-    background-color: #e22866;
-    color: #ecf0f1;
-
-    transition: background-color .3s;
-
-  }
-
-  .btn:hover, .btn:focus {
-    background-color: transparent;
-    border: 2px #e22866 solid;
-    cursor: pointer;
-  }
-
-  .btn > * {
-    position: relative;
-  }
-
-  .btn span {
-    display: block;
-    padding: 12px 24px;
-  }
-
-  .btn:before {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    display: block;
-    width: 0;
-    padding-top: 0;
-
-    border-radius: 100%;
-
-    background-color: transparent;
-
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .btn:active:before {
-    width: 120%;
-    padding-top: 120%;
-
-    transition: width .2s ease-out, padding-top .2s ease-out;
-  }
-  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap") font;
-@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css") fontawsome;
-.content {
-    width: 100%;
-    background-size: cover;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
-}
-
-.section h1{
-    padding-top: 10px;
-}
-
-
-#app {
-    display: flex;
-}
-
-html {
-    background: #090 url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right; 
-}
-
-.section {
-    background-color: white;
-    width: 50%;
-    margin-top: 0px;
-    color: rgb(0, 0, 0);
-    font-family: sans-serif;
-    font-weight: 100;
-    line-height: 19.2px
-}
-
-.section img{
-    width: -moz-available;
-}
-
-.btn {
-    background: #b10f26!important;
-    letter-spacing: .05rem;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: #808080;
-    border: 0px #ed8b00 solid;
-    border-color: transparent transparent #ed8b00;
-    cursor: pointer;
-}
-
-.btn span::after,
-.cta span::before {
-    position: absolute;
-    top: -9px;
-    border-width: 0 9px 14px;
-}
-
-.btn span::after {
-    left: -15px;
-}
+    <head>
+        <meta charset="utf-8">
+        <title>Carnival Demonstration</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+        <!-- Stylesheets from blackhat -->
+        <link rel="shortcut icon" href="https://www.blackhat.com/images/favicon2.ico" type="image/ico">
+        <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/theme.css">
+        <link rel="stylesheet" href="https://www.blackhat.com/css/informa-bar.css" type="text/css">
+        <link rel="stylesheet" href="https://www.blackhat.com/css/superfooter-2015b.css" type="text/css">
+        <!-- END blackhat stylesheets -->
+        <style>
+            html{
+            background: #20313b;
+            }
+            body{
+            font-family: 'Roboto', sans-serif;
+            color: #d2d2d6;
+            }
+            html, body, .viewport {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            }
+            #app{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            }
+            .content{
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-weight: lighter;
+            }
+            p {
+            text-align: center;
+            }
+            .section {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-weight: lighter;
+            }
+            .section h1,h2,h3,h4 {
+            margin: 5px;
+            text-align: center;
+            }
+            /*Pointlessly Pretty Button */
+            a{
+            text-decoration: none;
+            }
+            .btn {
+            text-transform: uppercase;
+            position: relative;
+            font-weight: bold;
+            display: block;
+            margin: 30px auto;
+            padding: 0;
+            overflow: hidden;
+            border-width: 0;
+            outline: none;
+            border-radius: 2px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+            background-color: #e22866;
+            color: #ecf0f1;
+            transition: background-color .3s;
+            }
+            .btn:hover, .btn:focus {
+            background-color: transparent;
+            border: 2px #e22866 solid;
+            cursor: pointer;
+            }
+            .btn > * {
+            position: relative;
+            }
+            .btn span {
+            display: block;
+            padding: 12px 24px;
+            }
+            .btn:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 0;
+            padding-top: 0;
+            border-radius: 100%;
+            background-color: transparent;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            }
+            .btn:active:before {
+            width: 120%;
+            padding-top: 120%;
+            transition: width .2s ease-out, padding-top .2s ease-out;
+            }
+            @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap") font;
+            @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css") fontawsome;
+            .content {
+            width: 100%;
+            background-size: cover;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: auto;
+            }
+            .section h1{
+            padding-top: 10px;
+            }
+            #app {
+            display: flex;
+            }
+            html {
+            background: #090 url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right; 
+            }
+            .section {
+            background-color: white;
+            width: 50%;
+            margin-top: 0px;
+            color: rgb(0, 0, 0);
+            font-family: sans-serif;
+            font-weight: 100;
+            line-height: 19.2px
+            }
+            .section img{
+            width: -moz-available;
+            }
+            .btn {
+            background: #b10f26!important;
+            letter-spacing: .05rem;
+            color: #fff;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 15px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            }
+            .btn:hover,
+            .btn:focus {
+            background-color: #808080;
+            border: 0px #ed8b00 solid;
+            border-color: transparent transparent #ed8b00;
+            cursor: pointer;
+            }
+            .btn span::after,
+            .cta span::before {
+            position: absolute;
+            top: -9px;
+            border-width: 0 9px 14px;
+            }
+            .btn span::after {
+            left: -15px;
+            }
         </style>
-</head>
-<body>
-<!-- NAV BAR -->
-<div class="container-fluid" id="top-bar-container">
-    <nav class="navbar navbar-expand-lg navbar-dark static-top my-0 py-0">         
-    <div class="container">
-    <a class="navbar-brand" href="https://www.blackhat.com/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
-    <img src="https://www.blackhat.com/images/logo.png" alt="Black Hat Home" style="height: 20px;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-bar" aria-controls="top-bar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="top-bar">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-    <a href="https://www.blackhat.com/" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
-    <img src="https://www.blackhat.com/images/page-graphics/home.png" alt="Home"></a></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Events</a>
-    <div class="dropdown-menu" aria-labelledby="menu-1">
-    <a class="dropdown-item" href="https://www.blackhat.com/sector/2024/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/tr-24v/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Fall Online Trainings</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/eu-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Europe</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/fss-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Financial Services Summit</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/upcoming.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Upcoming Events</a></div></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings</a>
-    <div class="dropdown-menu" aria-labelledby="menu-2">
-    <a class="dropdown-item" href="https://www.blackhat.com/briefings/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Call for Papers</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/sector-briefings-call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Briefings Call for Papers</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/archives.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Archives</a></div></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Trainings</a>
-    <div class="dropdown-menu" aria-labelledby="menu-3">
-    <a class="dropdown-item" href="https://www.blackhat.com/trainings/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Trainings</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/trainings/on-demand.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">On-Demand Training Courses</a>
-    <a class="dropdown-item" href="https://blackhatassessment.scoreapp.com/" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Self Assessment</a></div></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Arsenal</a>
-    <div class="dropdown-menu" aria-labelledby="menu-4">
-    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Arsenal</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal-resources.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Resources</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal-call-for-tools.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Call for Tools</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/review-board-arsenal.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Review Board</a></div></li>
-    <li class="nav-item">
-    <a href="https://www.blackhat.com/html/summits.html" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Summits</a></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Webinars</a>
-    <div class="dropdown-menu" aria-labelledby="menu-6">
-    <a class="dropdown-item" href="https://www.blackhat.com/html/webcast/webcast-home.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Webinars</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/executive-interviews/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Executive Interviews</a></div></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsorships</a>
-    <div class="dropdown-menu" aria-labelledby="menu-7">
-    <a class="dropdown-item" href="https://www.blackhat.com/html/sponsors.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsorship Opportunities</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/sponsor-news.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsor News</a></div></li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="menu-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">About</a>
-    <div class="dropdown-menu" aria-labelledby="menu-8">
-    <a class="dropdown-item" href="https://www.blackhat.com/about.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">About Us</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/blog/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Blog</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/press.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">In the News</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/press/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Press Releases</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/review-board.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings Review Board</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/training-review-board.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Training Review Board</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/sector/#advisory-board" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Review Board</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings Call for Papers</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/sector-briefings-call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Briefings Call for Papers</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/code-of-conduct.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Code of Conduct</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/contact.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Contact Us</a>
-    <a class="dropdown-item" href="https://www.blackhat.com/html/sustainability.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sustainability Pledge</a>
-    <a class="dropdown-item" href="https://informa.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Privacy</a></div></li></ul></div></div></nav>
-    <li class="nav-item">
-        {{#if profile}}
-            <a href="/logout" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Logout</a>
-        {{else}}
-            <a href="/protected" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Login</a>
-        {{/if}}
-    </li>
-    <nav id="top-bar-social" class="d-none d-xl-block">
-    <div class="container">
-    <div class="icons">
-    <a href="https://www.blackhat.com/mailing-list.html" class="mailing-list" target="_blank" rel="noopener noreferrer" title="Newsletter Sign Up" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
-    <a href="https://www.facebook.com/Black-Hat-Events-107691635153/" class="facebook" target="_blank" rel="noopener noreferrer" title="Facebook" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
-    <a href="https://twitter.com/BlackHatEvents" class="twitter" target="_blank" rel="noopener noreferrer" title="Twitter" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
-    <a href="https://www.linkedin.com/company/black-hat/" class="linkedin" target="_blank" rel="noopener noreferrer" title="LinkedIn" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
-    <a href="https://www.youtube.com/user/BlackHatOfficialYT" class="youtube" target="_blank" rel="noopener noreferrer" title="YouTube" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
-    <a href="https://www.flickr.com/photos/blackhatevents/albums/" class="flickr" target="_blank" rel="noopener noreferrer" title="Flickr" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a></div></div></nav></div>
-    <!-- END NAV BAR -->         
-    <div id="app">
-        {{#if profile}}
-        <div class="content"></div>
+    </head>
+    <body>
+        <!-- NAV BAR -->
+        <div class="container-fluid" id="top-bar-container">
+            <nav class="navbar navbar-expand-lg navbar-dark static-top my-0 py-0">
+                <div class="container">
+                    <a class="navbar-brand" href="https://www.blackhat.com/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                    <img src="https://www.blackhat.com/images/logo.png" alt="Black Hat Home" style="height: 20px;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-bar" aria-controls="top-bar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="top-bar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="https://www.blackhat.com/" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                <img src="https://www.blackhat.com/images/page-graphics/home.png" alt="Home"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Events</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-1">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/sector/2024/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/tr-24v/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Fall Online Trainings</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/eu-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Europe</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/fss-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Financial Services Summit</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/upcoming.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Upcoming Events</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-2">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/briefings/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Call for Papers</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/sector-briefings-call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Briefings Call for Papers</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/archives.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Archives</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Trainings</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-3">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/trainings/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Trainings</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/trainings/on-demand.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">On-Demand Training Courses</a>
+                                    <a class="dropdown-item" href="https://blackhatassessment.scoreapp.com/" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Self Assessment</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Arsenal</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-4">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Arsenal</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal-resources.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Resources</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/arsenal-call-for-tools.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Call for Tools</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/review-board-arsenal.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Review Board</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://www.blackhat.com/html/summits.html" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Summits</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Webinars</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-6">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/webcast/webcast-home.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Webinars</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/executive-interviews/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Executive Interviews</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsorships</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-7">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/sponsors.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsorship Opportunities</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/sponsor-news.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsor News</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menu-8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">About</a>
+                                <div class="dropdown-menu" aria-labelledby="menu-8">
+                                    <a class="dropdown-item" href="https://www.blackhat.com/about.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">About Us</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/blog/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Blog</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/press.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">In the News</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/press/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Press Releases</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/review-board.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings Review Board</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/training-review-board.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Training Review Board</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/sector/#advisory-board" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Review Board</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Briefings Call for Papers</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/sector-briefings-call-for-papers.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor Briefings Call for Papers</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/code-of-conduct.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Code of Conduct</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/contact.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Contact Us</a>
+                                    <a class="dropdown-item" href="https://www.blackhat.com/html/sustainability.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sustainability Pledge</a>
+                                    <a class="dropdown-item" href="https://informa.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Privacy</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                {{#if profile}}
+                                <a href="/logout" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Logout</a>
+                                {{else}}
+                                <a href="/protected" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Login</a>
+                                {{/if}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav id="top-bar-social" class="d-none d-xl-block">
+                <div class="container">
+                    <div class="icons">
+                        <a href="https://www.blackhat.com/mailing-list.html" class="mailing-list" target="_blank" rel="noopener noreferrer" title="Newsletter Sign Up" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <a href="https://www.facebook.com/Black-Hat-Events-107691635153/" class="facebook" target="_blank" rel="noopener noreferrer" title="Facebook" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <a href="https://twitter.com/BlackHatEvents" class="twitter" target="_blank" rel="noopener noreferrer" title="Twitter" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <a href="https://www.linkedin.com/company/black-hat/" class="linkedin" target="_blank" rel="noopener noreferrer" title="LinkedIn" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <a href="https://www.youtube.com/user/BlackHatOfficialYT" class="youtube" target="_blank" rel="noopener noreferrer" title="YouTube" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <a href="https://www.flickr.com/photos/blackhatevents/albums/" class="flickr" target="_blank" rel="noopener noreferrer" title="Flickr" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- END NAV BAR -->         
+        <div id="app">
+            {{#if profile}}
+            <div class="content"></div>
             <div class="section">
                 <h1>Welcome to BlackHat</h1>
             </div>
-        
-            
         </div>
         {{else}}
-        <div class="section"></div>
-            <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
-            </div>
         <div class="content"></div>
-            <main role="main">
-                <!-- BLACKHATINCLUDE | sourceStart_bootstrap-sitewide-header -->
-                <header class="event-reg sitewide">
-                  <div class="container h-100">
+        <main role="main">
+            <!-- BLACKHATINCLUDE | sourceStart_bootstrap-sitewide-header -->
+            <header class="event-reg sitewide">
+                <div class="container h-100">
                     <div class="row h-100 justify-content-center align-items-center">
-                      <div class="col-lg-7">
-                        <div class="col-lg-8">
-                          <div class="event-header-logo special-font-light">
-                            <a href="/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
-                              <img src="https://www.blackhat.com/images/logo.png" alt="Black Hat">
-                            </a>
-                          </div>
+                        <div class="col-lg-7">
+                            <div class="col-lg-8">
+                                <div class="event-header-logo special-font-light">
+                                    <a href="/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <img src="https://www.blackhat.com/images/logo.png" alt="Black Hat">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-5">
-                        &nbsp;
-                      </div>
+                        <div class="col-lg-5">
+                            &nbsp;
+                        </div>
                     </div>
-                  </div>
-                </header>
-                <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sitewide-header -->
-                <div class="container">
-                  <div class="row">
+                </div>
+            </header>
+            <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sitewide-header -->
+            <div class="container">
+                <div class="row">
                     <div class="col-lg-9 mb-3">
-                      <div id="homepage-slider" class="carousel slide mb-4" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#homepage-slider" data-slide-to="0" class=""></li><li data-target="#homepage-slider" data-slide-to="1" class="active"></li><li data-target="#homepage-slider" data-slide-to="2" class=""></li><li data-target="#homepage-slider" data-slide-to="3" class=""></li><li data-target="#homepage-slider" data-slide-to="4" class=""></li><li data-target="#homepage-slider" data-slide-to="5" class=""></li></ol><div class="carousel-inner" role="listbox"><a href="us-24/briefings/schedule/index.html" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/usa/2022/speaker.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>Black Hat USA 2024 Briefings slides available</h3><p>Slides, whitepapers, and more. <span class="more">View the schedule.</span></p></div></a><a href="sector/2024/" class="carousel-item active" style="background-image: url('https://www.blackhat.com/images/slides/sector/tables-at-sector.png')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>SecTor 2024 - live Oct 22-24 in Toronto</h3><p>SecTor is a must attend event for every IT Professional. <span class="more">Register here.</span></p></div></a><a href="tr-24v/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/usa/2020/virtual-announcement.png')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>Black Hat Fall Online Trainings, November 18-21 2024</h3><p>Online trainings courses, Eastern Time Zone <span class="more">Register here.</span></p></div></a><a href="eu-24/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/europe/2021/podium-02.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>Black Hat Europe - live Dec 9-12 in London</h3><p>Register for Briefings, Trainings, Arsenal tool demos, and more. <span class="more">Learn more.</span></p></div></a><a href="fss-24/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/venues/javits-center-new-york.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>Black Hat Financial Services Summit - live Dec 11 in New York</h3><p>Register today. <span class="more">Learn more.</span></p></div></a><a href="https://asia-briefings-cfp.blackhat.com/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/asia/podium-01.jpg')" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><div class="carousel-caption"><h3>Black Hat Asia 2025 Call for Papers is Open Through November 13</h3><p>View submission guidelines, tips, and submit your proposal.  <span class="more">Learn More Here.</span></p></div></a></div><a class="carousel-control-prev" href="#homepage-slider" role="button" data-slide="prev" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#homepage-slider" role="button" data-slide="next" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>
-                      <script>
-                        var slideShow = [
-                          {
-                            "title": "Black Hat USA 2024 Briefings slides available",
-                            "description": "Slides, whitepapers, and more.",
-                            "background": "https://www.blackhat.com/images/slides/usa/2022/speaker.jpg",
-                            "url": "us-24/briefings/schedule/index.html",
-                            "target": "",
-                            "rel": "",
-                            "more": "View the schedule."
-                          },
-              
-                          {
-                            "title": "SecTor 2024 - live Oct 22-24 in Toronto",
-                            "description": "SecTor is a must attend event for every IT Professional.",
-                            "background": "https://www.blackhat.com/images/slides/sector/tables-at-sector.png",
-                            "url": "sector/2024/",
-                            "target": "",
-                            "rel": "",
-                            "more": "Register here."
-                          },
-              
-                          {
-                            "title": "Black Hat Fall Online Trainings, November 18-21 2024",
-                            "description": "Online trainings courses, Eastern Time Zone",
-                            "background": "https://www.blackhat.com/images/slides/usa/2020/virtual-announcement.png",
-                            "url": "tr-24v/",
-                            "target": "",
-                            "rel": "",
-                            "more": "Register here."
-                          },
-              
-                          {
-                            "title": "Black Hat Europe - live Dec 9-12 in London",
-                            "description": "Register for Briefings, Trainings, Arsenal tool demos, and more.",
-                            "background": "https://www.blackhat.com/images/slides/europe/2021/podium-02.jpg",
-                            "url": "eu-24/",
-                            "target": "",
-                            "rel": "",
-                            "more": "Learn more."
-                          },
-              
-                          {
-                            "title": "Black Hat Financial Services Summit - live Dec 11 in New York",
-                            "description": "Register today.",
-                            "background": "https://www.blackhat.com/images/venues/javits-center-new-york.jpg",
-                            "url": "fss-24/",
-                            "target": "",
-                            "rel": "",
-                            "more": "Learn more."
-                          },
-              
-                          {
-                            "title": "Black Hat Asia 2025 Call for Papers is Open Through November 13",
-                            "description": "View submission guidelines, tips, and submit your proposal. ",
-                            "background": "https://www.blackhat.com/images/slides/asia/podium-01.jpg",
-                            "url": "https://asia-briefings-cfp.blackhat.com/",
-                            "target": "_blank",
-                            "rel": "noopener noreferrer",
-                            "more": "Learn More Here."
-                          }
-              
-                        ]
-                        $(document).ready(function() {
-                          BlackHatSlider(slideShow, "homepage-slider"); // BlackHatSlider() is a JavaScript function in /js/scripts.js
-                        });
-                      </script>
-              
-                      <h2 class="section-title"><span>Black Hat</span> Webinars</h2>
-                      <div class="row mb-4">
-                        <div class="col-sm-4">
-                          <a class="callout-icon webcast" href="html/webcast/webcast-home.html" title="Webinars" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                        <div id="homepage-slider" class="carousel slide mb-4" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#homepage-slider" data-slide-to="0" class=""></li>
+                                <li data-target="#homepage-slider" data-slide-to="1" class="active"></li>
+                                <li data-target="#homepage-slider" data-slide-to="2" class=""></li>
+                                <li data-target="#homepage-slider" data-slide-to="3" class=""></li>
+                                <li data-target="#homepage-slider" data-slide-to="4" class=""></li>
+                                <li data-target="#homepage-slider" data-slide-to="5" class=""></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <a href="us-24/briefings/schedule/index.html" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/usa/2022/speaker.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>Black Hat USA 2024 Briefings slides available</h3>
+                                        <p>Slides, whitepapers, and more. <span class="more">View the schedule.</span></p>
+                                    </div>
+                                </a>
+                                <a href="sector/2024/" class="carousel-item active" style="background-image: url('https://www.blackhat.com/images/slides/sector/tables-at-sector.png')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>SecTor 2024 - live Oct 22-24 in Toronto</h3>
+                                        <p>SecTor is a must attend event for every IT Professional. <span class="more">Register here.</span></p>
+                                    </div>
+                                </a>
+                                <a href="tr-24v/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/usa/2020/virtual-announcement.png')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>Black Hat Fall Online Trainings, November 18-21 2024</h3>
+                                        <p>Online trainings courses, Eastern Time Zone <span class="more">Register here.</span></p>
+                                    </div>
+                                </a>
+                                <a href="eu-24/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/europe/2021/podium-02.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>Black Hat Europe - live Dec 9-12 in London</h3>
+                                        <p>Register for Briefings, Trainings, Arsenal tool demos, and more. <span class="more">Learn more.</span></p>
+                                    </div>
+                                </a>
+                                <a href="fss-24/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/venues/javits-center-new-york.jpg')" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>Black Hat Financial Services Summit - live Dec 11 in New York</h3>
+                                        <p>Register today. <span class="more">Learn more.</span></p>
+                                    </div>
+                                </a>
+                                <a href="https://asia-briefings-cfp.blackhat.com/" class="carousel-item" style="background-image: url('https://www.blackhat.com/images/slides/asia/podium-01.jpg')" target="_blank" rel="noopener noreferrer" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">
+                                    <div class="carousel-caption">
+                                        <h3>Black Hat Asia 2025 Call for Papers is Open Through November 13</h3>
+                                        <p>View submission guidelines, tips, and submit your proposal.  <span class="more">Learn More Here.</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="carousel-control-prev" href="#homepage-slider" role="button" data-slide="prev" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#homepage-slider" role="button" data-slide="next" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
                         </div>
-                        <div class="col-sm-8">
-                          <h3>Security Research in Real Time</h3>
-                          <ul>
-                            <!--
-                            <li>September 5, 2024 - <a href="html/webcast/09052024.html">Defeating the Dangers of a Data Breach: Top Strategies to Get Your Organization Ahead of a Data Security Incident</a></li>
-              
-                            <li>September 12, 2024 - <a href="html/webcast/09122024.html">Unsolved Problems in Application Security</a></li>
-                            -->
-              
-                            <li>October 17, 2024 - <a href="html/webcast/10172024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Elevate Your Security Analytics with LLMS</a></li>
-              
-                            <li>October 24, 2024 - <a href="html/webcast/10242024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Get the Low-Down on Trends in Application Security</a></li>
-              
-                            <li>October 31, 2024 - <a href="html/webcast/10312024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Unlock Cyber Mastery: Erase Vulnerabilities, Build Resilience</a></li>
-              
-                            <li><a href="html/sponsors.html#webinars" class="view-more mb-0" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsor a Webinar</a></li>
-              
-                            <li><a href="html/webcast/webcast-home.html" class="view-more mb-0" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View all of our recent Webinars</a></li>
-                          </ul>
+                        <script>
+                            var slideShow = [
+                              {
+                                "title": "Black Hat USA 2024 Briefings slides available",
+                                "description": "Slides, whitepapers, and more.",
+                                "background": "https://www.blackhat.com/images/slides/usa/2022/speaker.jpg",
+                                "url": "us-24/briefings/schedule/index.html",
+                                "target": "",
+                                "rel": "",
+                                "more": "View the schedule."
+                              },
+                            
+                              {
+                                "title": "SecTor 2024 - live Oct 22-24 in Toronto",
+                                "description": "SecTor is a must attend event for every IT Professional.",
+                                "background": "https://www.blackhat.com/images/slides/sector/tables-at-sector.png",
+                                "url": "sector/2024/",
+                                "target": "",
+                                "rel": "",
+                                "more": "Register here."
+                              },
+                            
+                              {
+                                "title": "Black Hat Fall Online Trainings, November 18-21 2024",
+                                "description": "Online trainings courses, Eastern Time Zone",
+                                "background": "https://www.blackhat.com/images/slides/usa/2020/virtual-announcement.png",
+                                "url": "tr-24v/",
+                                "target": "",
+                                "rel": "",
+                                "more": "Register here."
+                              },
+                            
+                              {
+                                "title": "Black Hat Europe - live Dec 9-12 in London",
+                                "description": "Register for Briefings, Trainings, Arsenal tool demos, and more.",
+                                "background": "https://www.blackhat.com/images/slides/europe/2021/podium-02.jpg",
+                                "url": "eu-24/",
+                                "target": "",
+                                "rel": "",
+                                "more": "Learn more."
+                              },
+                            
+                              {
+                                "title": "Black Hat Financial Services Summit - live Dec 11 in New York",
+                                "description": "Register today.",
+                                "background": "https://www.blackhat.com/images/venues/javits-center-new-york.jpg",
+                                "url": "fss-24/",
+                                "target": "",
+                                "rel": "",
+                                "more": "Learn more."
+                              },
+                            
+                              {
+                                "title": "Black Hat Asia 2025 Call for Papers is Open Through November 13",
+                                "description": "View submission guidelines, tips, and submit your proposal. ",
+                                "background": "https://www.blackhat.com/images/slides/asia/podium-01.jpg",
+                                "url": "https://asia-briefings-cfp.blackhat.com/",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "more": "Learn More Here."
+                              }
+                            
+                            ]
+                            $(document).ready(function() {
+                              BlackHatSlider(slideShow, "homepage-slider"); // BlackHatSlider() is a JavaScript function in /js/scripts.js
+                            });
+                        </script>
+                        <h2 class="section-title"><span>Black Hat</span> Webinars</h2>
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <a class="callout-icon webcast" href="html/webcast/webcast-home.html" title="Webinars" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h3>Security Research in Real Time</h3>
+                                <ul>
+                                    <!--
+                                        <li>September 5, 2024 - <a href="html/webcast/09052024.html">Defeating the Dangers of a Data Breach: Top Strategies to Get Your Organization Ahead of a Data Security Incident</a></li>
+                                        
+                                        <li>September 12, 2024 - <a href="html/webcast/09122024.html">Unsolved Problems in Application Security</a></li>
+                                        -->
+                                    <li>October 17, 2024 - <a href="html/webcast/10172024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Elevate Your Security Analytics with LLMS</a></li>
+                                    <li>October 24, 2024 - <a href="html/webcast/10242024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Get the Low-Down on Trends in Application Security</a></li>
+                                    <li>October 31, 2024 - <a href="html/webcast/10312024.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Unlock Cyber Mastery: Erase Vulnerabilities, Build Resilience</a></li>
+                                    <li><a href="html/sponsors.html#webinars" class="view-more mb-0" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sponsor a Webinar</a></li>
+                                    <li><a href="html/webcast/webcast-home.html" class="view-more mb-0" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View all of our recent Webinars</a></li>
+                                </ul>
+                            </div>
                         </div>
-                      </div>
-              
-                      <h2 class="section-title"><span>Review</span> Board</h2>
-                      <div id="review-board-wide"><div class="row"><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#Berta" title="Sheila A. Berta" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/sheila-ayelen-berta.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#Eng" title="Chris Eng" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/chris-eng.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#KA" title="Monnappa K A" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/monnappa-k-a.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#Nakajima" title="Asuka Nakajima" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/asuka-nakajima.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#Price" title="Kymberlee Price" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/kymberlee-price.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/review-board.html#Zanero" title="Stefano Zanero" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/stefano-zanero.png" alt="" class="grayscale"></a></div></div></div><hr class="mt-0 mb-3 pt-0 pb-0"><p class="text-right mb-0 pb-0"><a class="view-more mb-3" href="https://www.blackhat.com/review-board.html" target="" rel="" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View All Members</a></p>
-                      </div>
-              
-                      <h2 class="section-title"><span>Training Review</span> Board</h2>
-                      <div id="training-review-board-wide"><div class="row"><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Cuthbert" title="Daniel Cuthbert" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/daniel-cuthbert.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Valeros" title="Veronica Valeros" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/veronica-valeros.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Squire" title="Jonathan Squire" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/jon-squire.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Stump" title="Bart Stump" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/bart-stump.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Wyler" title="Neil Wyler" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/neil-wyler.png" alt="" class="grayscale"></a></div></div><div class="col-4 col-md-2 mb-3"><div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Markstedter" title="Maria Markstedter" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/maria-markstedter.png" alt="" class="grayscale"></a></div></div></div><hr class="mt-0 mb-3 pt-0 pb-0"><p class="text-right mb-0 pb-0"><a class="view-more mb-3" href="https://www.blackhat.com/training-review-board.html" target="" rel="" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View All Members</a></p>
-                      </div>
-              
+                        <h2 class="section-title"><span>Review</span> Board</h2>
+                        <div id="review-board-wide">
+                            <div class="row">
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#Berta" title="Sheila A. Berta" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/sheila-ayelen-berta.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#Eng" title="Chris Eng" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/chris-eng.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#KA" title="Monnappa K A" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/monnappa-k-a.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#Nakajima" title="Asuka Nakajima" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/asuka-nakajima.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#Price" title="Kymberlee Price" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/kymberlee-price.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/review-board.html#Zanero" title="Stefano Zanero" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/stefano-zanero.png" alt="" class="grayscale"></a></div>
+                                </div>
+                            </div>
+                            <hr class="mt-0 mb-3 pt-0 pb-0">
+                            <p class="text-right mb-0 pb-0"><a class="view-more mb-3" href="https://www.blackhat.com/review-board.html" target="" rel="" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View All Members</a></p>
+                        </div>
+                        <h2 class="section-title"><span>Training Review</span> Board</h2>
+                        <div id="training-review-board-wide">
+                            <div class="row">
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Cuthbert" title="Daniel Cuthbert" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/daniel-cuthbert.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Valeros" title="Veronica Valeros" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/veronica-valeros.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Squire" title="Jonathan Squire" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/jon-squire.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Stump" title="Bart Stump" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/bart-stump.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Wyler" title="Neil Wyler" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/neil-wyler.png" alt="" class="grayscale"></a></div>
+                                </div>
+                                <div class="col-4 col-md-2 mb-3">
+                                    <div class="thumb"><a href="https://www.blackhat.com/training-review-board.html#Markstedter" title="Maria Markstedter" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018"><img src="https://www.blackhat.com/images/portraits/maria-markstedter.png" alt="" class="grayscale"></a></div>
+                                </div>
+                            </div>
+                            <hr class="mt-0 mb-3 pt-0 pb-0">
+                            <p class="text-right mb-0 pb-0"><a class="view-more mb-3" href="https://www.blackhat.com/training-review-board.html" target="" rel="" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View All Members</a></p>
+                        </div>
                     </div>
                     <div class="col-lg-3">
-                      <!-- BLACKHATINCLUDE | sourceStart_bootstrap-sidebar-right -->
-                      <div class="sidebar">
-                        <h2><span>Upcoming</span> Events</h2>
-                        <article id="upcoming-events">
-                          <ul>
-                            <!-- controlled in /js/scripts.js -->
-                          <li><a href="https://www.blackhat.com/sector/2024/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor</a><br>October 22-24, 2024</li><li><a href="https://www.blackhat.com/tr-24v/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Fall Online Trainings</a><br>November 18-21, 2024</li><li><a target="_blank" rel="noopener noreferrer" href="https://blackhatmea.com/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Middle East &amp; Africa</a><br>November 26-28, 2024</li><li><a href="https://www.blackhat.com/eu-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Europe</a><br>December 9-12, 2024</li><li><a href="https://www.blackhat.com/fss-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Financial Services Summit</a><br>December 11, 2024</li><li><a href="https://www.blackhat.com/upcoming.html#asia" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Asia</a><br>April 1-4, 2025</li><li><a href="https://www.blackhat.com/upcoming.html#usa" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat USA</a><br>August 2-7, 2025</li></ul>
-                        </article>
-              
-                        <h2>Blog</h2>
-                        <article>
-                          <ul>
-                            <li><a href="https://www.blackhat.com/html/blog/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View all Blog posts</a></li>
-                          </ul>
-                        </article>
-              
-                        <h2><span>Stay</span> Connected</h2>
-                        <article>
-                          <p><a href="https://www.blackhat.com/mailing-list.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sign up</a> to receive information about upcoming Black Hat events including Briefings, Trainings, speakers, and important event updates.</p>
-                        </article>
-                      </div>
-                      <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sidebar-right -->
-                    </div>
-                  </div>
-                </div>
-              
-                <!-- BLACKHATINCLUDE | sourceStart_sustaining-sponsors-wide -->
-                <div class="container">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <h2 class="section-title"><span>Sustaining</span> Partners</h2>
-                      <div class="partners" id="sustaining-partners-wide">
-                        <div class="container d-flex h-100">
-                          <div class="row justify-content-center align-self-center">
-                            <!-- see /js/scripts.js -->
-                          </div>
+                        <!-- BLACKHATINCLUDE | sourceStart_bootstrap-sidebar-right -->
+                        <div class="sidebar">
+                            <h2><span>Upcoming</span> Events</h2>
+                            <article id="upcoming-events">
+                                <ul>
+                                    <!-- controlled in /js/scripts.js -->
+                                    <li><a href="https://www.blackhat.com/sector/2024/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">SecTor</a><br>October 22-24, 2024</li>
+                                    <li><a href="https://www.blackhat.com/tr-24v/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Fall Online Trainings</a><br>November 18-21, 2024</li>
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://blackhatmea.com/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Middle East &amp; Africa</a><br>November 26-28, 2024</li>
+                                    <li><a href="https://www.blackhat.com/eu-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Europe</a><br>December 9-12, 2024</li>
+                                    <li><a href="https://www.blackhat.com/fss-24/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Financial Services Summit</a><br>December 11, 2024</li>
+                                    <li><a href="https://www.blackhat.com/upcoming.html#asia" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat Asia</a><br>April 1-4, 2025</li>
+                                    <li><a href="https://www.blackhat.com/upcoming.html#usa" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Black Hat USA</a><br>August 2-7, 2025</li>
+                                </ul>
+                            </article>
+                            <h2>Blog</h2>
+                            <article>
+                                <ul>
+                                    <li><a href="https://www.blackhat.com/html/blog/" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">View all Blog posts</a></li>
+                                </ul>
+                            </article>
+                            <h2><span>Stay</span> Connected</h2>
+                            <article>
+                                <p><a href="https://www.blackhat.com/mailing-list.html" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Sign up</a> to receive information about upcoming Black Hat events including Briefings, Trainings, speakers, and important event updates.</p>
+                            </article>
                         </div>
-                      <span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#akamai" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/akamai.png" alt="Akamai" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#armis" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/armis.png" alt="Armis" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#axonius" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/axonius.png" alt="Axonius" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#cisco" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/cisco.png" alt="Cisco" height="60"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#crowdstrike" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/crowdstrike.png" alt="CrowdStrike" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#fortinet" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/fortinet.png" alt="Fortinet" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#knowbe4" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/knowbe4.png" alt="KnowBe4" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#manageengine" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/manageengine.png" alt="ManageEngine (Zoho Corp)" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#microsoft" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/microsoft.png" alt="Microsoft" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#pentera" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/pentera.png" alt="Pentera" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#proofpoint" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/proofpoint.png" alt="Proofpoint" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#qualys" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/qualys.png" alt="Qualys" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sentinelone" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sentinelone.png" alt="SentinelOne" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#snyk" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/snyk.png" alt="Snyk" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sophos" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sophos.png" alt="Sophos" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sysdig" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sysdig.png" alt="Sysdig" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#threatlocker" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/threatlocker.png" alt="ThreatLocker" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#trend-micro" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/trend-micro.png" alt="Trend Micro" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#wiz" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/wiz.png" alt="Wiz" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#zscaler" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/zscaler.png" alt="Zscaler" width="120"></a></span></div>
+                        <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sidebar-right -->
                     </div>
-                  </div>
                 </div>
-                <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sustaining-sponsors-wide -->
-              
-              </main>
-         
+            </div>
+            <!-- BLACKHATINCLUDE | sourceStart_sustaining-sponsors-wide -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="section-title"><span>Sustaining</span> Partners</h2>
+                        <div class="partners" id="sustaining-partners-wide">
+                            <div class="container d-flex h-100">
+                                <div class="row justify-content-center align-self-center">
+                                    <!-- see /js/scripts.js -->
+                                </div>
+                            </div>
+                            <span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#akamai" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/akamai.png" alt="Akamai" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#armis" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/armis.png" alt="Armis" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#axonius" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/axonius.png" alt="Axonius" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#cisco" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/cisco.png" alt="Cisco" height="60"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#crowdstrike" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/crowdstrike.png" alt="CrowdStrike" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#fortinet" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/fortinet.png" alt="Fortinet" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#knowbe4" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/knowbe4.png" alt="KnowBe4" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#manageengine" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/manageengine.png" alt="ManageEngine (Zoho Corp)" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#microsoft" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/microsoft.png" alt="Microsoft" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#pentera" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/pentera.png" alt="Pentera" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#proofpoint" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/proofpoint.png" alt="Proofpoint" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#qualys" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/qualys.png" alt="Qualys" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sentinelone" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sentinelone.png" alt="SentinelOne" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#snyk" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/snyk.png" alt="Snyk" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sophos" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sophos.png" alt="Sophos" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#sysdig" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/sysdig.png" alt="Sysdig" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#threatlocker" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/threatlocker.png" alt="ThreatLocker" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#trend-micro" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/trend-micro.png" alt="Trend Micro" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#wiz" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/wiz.png" alt="Wiz" width="120"></a></span><span><a href="https://www.blackhat.com/html/sponsors_sustaining.html#zscaler" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">&nbsp;<img src="https://www.blackhat.com/images/logos/zscaler.png" alt="Zscaler" width="120"></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BLACKHATINCLUDE | sourceEnd_bootstrap-sustaining-sponsors-wide -->
+        </main>
         </div>
         {{/if}}    
-    </div>
-</body>
+        </div>
+    </body>
 </html>
