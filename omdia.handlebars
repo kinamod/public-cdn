@@ -124,7 +124,7 @@
             display: flex;
             }
             html {
-            background: #333 url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right; 
+            background: #000 url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right; 
             }
             .section {
             background-color: white;
@@ -247,11 +247,13 @@
                                 </div>
                             </li>
                             <li class="nav-item">
+                                <strong>
                                 {{#if profile}}
                                 <a href="/logout" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Logout</a>
                                 {{else}}
                                 <a href="/protected" class="nav-link" data-feathr-click-track="true" data-feathr-link-aids="65414312709dc1f319b80018">Login</a>
                                 {{/if}}
+                                </strong>
                             </li>
                         </ul>
                     </div>
