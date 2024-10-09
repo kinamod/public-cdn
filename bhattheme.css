@@ -81,7 +81,6 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 }
 h1 {
   background: rgba(4,18,27,.75);
-  background: linear-gradient(to right, rgba(4,18,27,.75), transparent);
   font-size: 34px;
   font-weight: bold;
   letter-spacing: -1px;
@@ -202,7 +201,6 @@ main ul,
 }
 .alert h2:after {
   background: #33ceff;
-  background: linear-gradient(to right, #33ceff, rgba(255,0,0,0));
   content: ' ';
   display: block;
   height: 1px;
@@ -712,7 +710,6 @@ ul.navbar-nav img {
 }
 .popup {
   background: #13272e;
-  background: linear-gradient(#13272e, #111, #13272e);
   border-radius: 5px;
   margin: 70px auto 35px auto;
   padding: 20px;
