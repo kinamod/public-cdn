@@ -719,7 +719,6 @@ ul.navbar-nav img {
 }
 .popup:before {
   background: #333;
-  background: linear-gradient(#777, 10%, #333);
   border-radius: 5px;
   content: ' ';
   display: block;
