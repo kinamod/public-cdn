@@ -65,17 +65,10 @@ button:hover, a:hover {
               <img src={{profile.picture}} alt="John" style="width:100%">
               <h1>{{profile.name}}</h1>
               <p class="title">{{profile.user_id}}</p>
-              Diet: {{profile.diet}}
-              <div style="margin: 24px 0;">
-                <a href="#"><i class="fa fa-dribbble"></i></a> 
-                <a href="#"><i class="fa fa-twitter"></i></a>  
-                <a href="#"><i class="fa fa-linkedin"></i></a>  
-                <a href="#"><i class="fa fa-facebook"></i></a> 
-              </div>
+              <h2>Diet: {{profile.diet}}</h2>
               <p><button>Contact</button></p>
             </div>
-            <h2>Your Nearest Stores</h2>
-            {{profile.morrismap}}
+            <h2>Your Nearest Stores</h2>(according to your Auth0 token)
             
             <iframe src={{profile.morrismap}} width="100%" height="800px" title="W3Schools Free Online Web Tutorials"></iframe>
         {{else}}
