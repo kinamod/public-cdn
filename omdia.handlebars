@@ -9,7 +9,8 @@
         <link rel="shortcut icon" href="https://www.blackhat.com/images/favicon2.ico" type="image/ico">
         <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap-reboot.css">
         <link rel="stylesheet" href="https://www.blackhat.com/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/kinamod/public-cdn/refs/heads/main/bhattheme.css"type="text/css">
+        <link rel="stylesheet" href="https://kinamod.github.io/public-cdn/bhattheme.css">
+        <!-- <link rel="stylesheet" href="./Untitled-1.css"> -->
         
         <link rel="stylesheet" href="https://www.blackhat.com/css/informa-bar.css" type="text/css">
         <link rel="stylesheet" href="https://www.blackhat.com/css/superfooter-2015b.css" type="text/css">
@@ -170,7 +171,7 @@
             }
             .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
+            max-width: 500px;
             margin: auto;
             text-align: center;
             font-family: arial;
@@ -201,6 +202,8 @@
             }
             .loginout{
                 font-size:1.5em !important;
+                background-color: #02206e !important;
+                border-radius: .51em;
             }
         </style>
     </head>
@@ -311,36 +314,24 @@
         <div id="app">
             {{#if profile}}
             <div class="content"></div>
-            <div class="section">
-                <h1>Welcome to BlackHat</h1>
-                <h2>JSON.stringify({{profile}})</h2>
-                Name {{profile.name}} <br />
-                
-                Industry interests {{profile.user_metadata.industry_interests}} <br />
-                Job Title {{profile.user_metadata.job_title}} <br />
-                Phone Number {{profile.user_metadata.phone_number}} <br />
-
-                Nickname {{profile.nickname}} <br />
-                Email {{profile.email}} <br />
-                Company name {{profile.company_name}} <br />
-                hello here is {{profile}} <br />
-                <h1>HELLOOO!!!</h1>
-                <h2 style="text-align:center">User Profile Card</h2>
-            <div class="card">
-                <img src={{profile.picture}} alt="John" style="width:100%">
-                <h1>{{profile.name}}</h1>
-                <p class="title"> {{profile.user_metadata.job_title}}</p>
-                <h2>Diet: {{profile.diet}}</h2>
-                <p><button>Contact</button></p>
-            </div>
-            </div>
+                                    
             <h2 style="text-align:center">User Profile Card</h2>
             <div class="card">
                 <img src={{profile.picture}} alt="Photo" style="width:100%">
                 <h1>{{profile.name}}</h1>
                 <p class="title">{{profile.user_id}}</p>
-                <h2>Diet: {{profile.diet}}</h2>
+                <p class="title">Name {{profile.name}} <br />
+                                        
+                    Industry interests {{profile.user_metadata.industry_interests}} <br />
+                    Job Title {{profile.user_metadata.job_title}} <br />
+                    Phone Number {{profile.user_metadata.phone_number}} <br />
+
+                    Nickname {{profile.nickname}} <br />
+                    Email {{profile.email}} <br />
+                    Company name {{profile.company_name}} <br />
+                </p>
                 <p><button>Contact</button></p>
+                
             </div>
         </div>
         {{else}}
