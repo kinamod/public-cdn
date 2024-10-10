@@ -48,7 +48,7 @@ html, body {
 }
 
 body {
-  background: #000 url(../images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right;
+  background: #000 url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right;
   color: #fff;
   font-family: sans-serif;
   font-size: 13px;
@@ -162,7 +162,7 @@ main p {
 main ul, 
 .training-short-abstract ul {
   list-style-type: none;
-  list-style-image: url(../images/page-graphics-asia-18/bullet.png);
+  list-style-image: url(https://www.blackhat.com/images/page-graphics-asia-18/bullet.png);
   margin: 0 0 15px 0;
   padding: 0 0 0 16px;
 }
@@ -172,7 +172,7 @@ main ul,
 }
 
 .alert {
-  background: url(../images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right;
+  background: url(https://www.blackhat.com/images/page-graphics-18/BH_BodyBG.jpg) no-repeat top right;
   background-size: cover;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -183,7 +183,7 @@ main ul,
   position: relative;
 }
 .alert:after {
-  background: #33ceff url(../images/icons/alert.png) no-repeat center 1em;
+  background: #33ceff url(https://www.blackhat.com/images/icons/alert.png) no-repeat center 1em;
   background-size: 50% 50%;
   border-radius: 50%;
   content: ' ';
@@ -317,7 +317,7 @@ main ul,
   width: 100%;
 }
 .link-box::after {
-  background-image: url(../images/silhouette-01.png);
+  background-image: url(https://www.blackhat.com/images/silhouette-01.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -336,25 +336,25 @@ main ul,
 }
 /*
 .link-box.arsenal::after {
-  background-image: url(../images/slides/general/stage-with-lighting.jpg);
+  background-image: url(https://www.blackhat.com/images/slides/general/stage-with-lighting.jpg);
 }
 .link-box.business-hall::after {
-  background-image: url(../images/slides/europe/2019/photos-flickr.png);
+  background-image: url(https://www.blackhat.com/images/slides/europe/2019/photos-flickr.png);
 }
 .link-box.business-hall-sessions::after {
-  background-image: url(../images/slides/general/stage-with-lighting-02.jpg);
+  background-image: url(https://www.blackhat.com/images/slides/general/stage-with-lighting-02.jpg);
 }
 .link-box.community::after {
-  background-image: url(../images/silhouette-01.png);
+  background-image: url(https://www.blackhat.com/images/silhouette-01.png);
 }
 .link-box.noc::after {
-  background-image: url(../images/general/noc.png);
+  background-image: url(https://www.blackhat.com/images/general/noc.png);
 }
 .link-box.parties::after {
-  background-image: url(../images/slides/mea/stage-and-audience-01.jpg);
+  background-image: url(https://www.blackhat.com/images/slides/mea/stage-and-audience-01.jpg);
 }
 .link-box.omdia::after {
-  background-image: url(../images/slides/trainings/2021/talking.jpg);
+  background-image: url(https://www.blackhat.com/images/slides/trainings/2021/talking.jpg);
 }
 */
 a.link-box p {
@@ -459,19 +459,19 @@ a.link-box:hover:after, a.link-box:active:after, a.link-box:focus:after {
   padding: 15px 0 15px 35px;
 }
 .audio {
-  background: url('../images/page-graphics-usa13/audio-icon.png') no-repeat left;
+  background: url('https://www.blackhat.com/images/page-graphics-usa13/audio-icon.png') no-repeat left;
 }
 .doc {
-  background: url('../images/page-graphics-usa13/doc-icon.png') no-repeat left;
+  background: url('https://www.blackhat.com/images/page-graphics-usa13/doc-icon.png') no-repeat left;
 }
 .email {
-  background: url('../images/page-graphics/email-icon.png') no-repeat left;
+  background: url('https://www.blackhat.com/images/page-graphics/email-icon.png') no-repeat left;
 }
 .pdf {
-  background: url('../images/page-graphics-usa13/pdf-icon.png') no-repeat left;
+  background: url('https://www.blackhat.com/images/page-graphics-usa13/pdf-icon.png') no-repeat left;
 }
 .xls {
-  background: url('../images/page-graphics-usa13/xls-icon.png') no-repeat left;
+  background: url('https://www.blackhat.com/images/page-graphics-usa13/xls-icon.png') no-repeat left;
 }
 
 .travel-icon {
@@ -484,10 +484,10 @@ a.link-box:hover:after, a.link-box:active:after, a.link-box:focus:after {
   width: 20px;
 }
 .travel-icon.parking {
-  background-image: url('../images/icons/parking.png');
+  background-image: url('https://www.blackhat.com/images/icons/parking.png');
 }
 .travel-icon.pick-up-drop-off {
-  background-image: url('../images/icons/pick-up-drop-off.png');
+  background-image: url('https://www.blackhat.com/images/icons/pick-up-drop-off.png');
 }
 
 /* Site Menu, Event Menu - default small-screen styles - removed for Event Menu for larger screens (below) */
@@ -524,28 +524,28 @@ a.link-box:hover:after, a.link-box:active:after, a.link-box:focus:after {
   filter: invert(1);
 }
 #top-bar-social a.facebook {
-  background-image: url(../images/icons/facebook.png);
+  background-image: url(https://www.blackhat.com/images/icons/facebook.png);
 }
 #top-bar-social a.flickr {
-  background-image: url(../images/icons/flickr.png);
+  background-image: url(https://www.blackhat.com/images/icons/flickr.png);
 }
 #top-bar-social a.instagram {
-  background-image: url(../images/icons/instagram.png);
+  background-image: url(https://www.blackhat.com/images/icons/instagram.png);
 }
 #top-bar-social a.linkedin {
-  background-image: url(../images/icons/linkedin.png);
+  background-image: url(https://www.blackhat.com/images/icons/linkedin.png);
 }
 #top-bar-social a.mailing-list {
-  background-image: url(../images/icons/email.png);
+  background-image: url(https://www.blackhat.com/images/icons/email.png);
 }
 #top-bar-social a.twitter {
-  background-image: url(../images/icons/x.png);
+  background-image: url(https://www.blackhat.com/images/icons/x.png);
 }
 #top-bar-social a.youtube {
-  background-image: url(../images/icons/youtube.png);
+  background-image: url(https://www.blackhat.com/images/icons/youtube.png);
 }
 #top-bar-social a.x {
-  background-image: url(../images/icons/x.png);
+  background-image: url(https://www.blackhat.com/images/icons/x.png);
 }
 
 
@@ -560,67 +560,67 @@ a.link-box:hover:after, a.link-box:active:after, a.link-box:focus:after {
   width: 29px;
 }
 #top-bar-social a.mailing-list {
-  background-image: url(../images/page-graphics/social-email.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-email.png);
 }
 #top-bar-social a.mailing-list:focus, 
 #top-bar-social a.mailing-list:hover {
-  background-image: url(../images/page-graphics/social-email.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-email.png);
 }
 
 #top-bar-social a.mailing-list {
-  background-image: url(../images/page-graphics/social-email.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-email.png);
 }
 #top-bar-social a.mailing-list:focus, 
 #top-bar-social a.mailing-list:hover {
-  background-image: url(../images/page-graphics/social-email-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-email-over.png);
 }
 
 #top-bar-social a.facebook {
-  background-image: url(../images/page-graphics/social-fb.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-fb.png);
 }
 #top-bar-social a.facebook:focus, 
 #top-bar-social a.facebook:hover {
-  background-image: url(../images/page-graphics/social-fb-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-fb-over.png);
 }
 
 #top-bar-social a.twitter {
-  background-image: url(../images/page-graphics/social-tw.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-tw.png);
 }
 #top-bar-social a.twitter:focus, 
 #top-bar-social a.twitter:hover {
-  background-image: url(../images/page-graphics/social-tw-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-tw-over.png);
 }
 
 #top-bar-social a.linkedin {
-  background-image: url(../images/page-graphics/social-in.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-in.png);
 }
 #top-bar-social a.linkedin:focus, 
 #top-bar-social a.linkedin:hover {
-  background-image: url(../images/page-graphics/social-in-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-in-over.png);
 }
 
 #top-bar-social a.youtube {
-  background-image: url(../images/page-graphics/social-youtube.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-youtube.png);
 }
 #top-bar-social a.youtube:focus, 
 #top-bar-social a.youtube:hover {
-  background-image: url(../images/page-graphics/social-youtube-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-youtube-over.png);
 }
 
 #top-bar-social a.flickr {
-  background-image: url(../images/page-graphics/social-fk.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-fk.png);
 }
 #top-bar-social a.flickr:focus, 
 #top-bar-social a.flickr:hover {
-  background-image: url(../images/page-graphics/social-fk-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-fk-over.png);
 }
 
 #top-bar-social a.x {
-  background-image: url(../images/page-graphics/social-x.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-x.png);
 }
 #top-bar-social a.x:focus, 
 #top-bar-social a.x:hover {
-  background-image: url(../images/page-graphics/social-x-over.png);
+  background-image: url(https://www.blackhat.com/images/page-graphics/social-x-over.png);
 }
 */
 
@@ -852,7 +852,7 @@ ul.navbar-nav img {
   color: #33ceff;
 }
 .special-features-header {
-  background: rgba(0,0,0,.66) url(../images/silhouette-01.png) no-repeat 0 -25px;
+  background: rgba(0,0,0,.66) url(https://www.blackhat.com/images/silhouette-01.png) no-repeat 0 -25px;
   border: 2px solid #33ceff;
   border-radius: 2px;
   display: block;
@@ -918,7 +918,7 @@ ul.navbar-nav img {
 }
 .special-notification:before {
   background: #33ceff;
-  background: transparent url(../images/portraits/default.png) no-repeat center center;
+  background: transparent url(https://www.blackhat.com/images/portraits/default.png) no-repeat center center;
   background-size: cover;
   border: 1px solid #33ceff;
   border-radius: 50%;
@@ -1348,7 +1348,7 @@ a.callout-icon:before {
   display: block;
 }
 a.callout-icon:before {
-  background: url(../images/callout-bg.png) repeat-y center center;
+  background: url(https://www.blackhat.com/images/callout-bg.png) repeat-y center center;
   background-size: cover;
   border: 1px solid #1d79a0;
   border-radius: 3px;
@@ -1361,10 +1361,10 @@ a.callout-icon:before {
   z-index: -1;
 }
 a.callout-icon.play {
-  background-image: url(../images/icons/play.png);
+  background-image: url(https://www.blackhat.com/images/icons/play.png);
 }
 a.callout-icon.webcast {
-  background-image: url(../images/icons/webcast.png);
+  background-image: url(https://www.blackhat.com/images/icons/webcast.png);
 }
 
 /* Pricing boxes */
@@ -1651,11 +1651,11 @@ a.price-box-inactive br {
   left: .66em;
 }
 .right-col-anchors li a.email:after {
-  background: url(../images/page-graphics/email-icon.png) no-repeat left center;
+  background: url(https://www.blackhat.com/images/page-graphics/email-icon.png) no-repeat left center;
   background-size: contain;
 }
 .right-col-anchors li a.pdf:after {
-  background: url(../images/page-graphics-usa13/pdf-icon.png) no-repeat left center;
+  background: url(https://www.blackhat.com/images/page-graphics-usa13/pdf-icon.png) no-repeat left center;
   background-size: contain;
 }
 
@@ -1710,7 +1710,7 @@ a.price-box-inactive br {
 
 /* For use at the top of pages like /trainings/index.html, /briefings/index.html, et al */
 .subsection-header {
-  background: #000 url(../images/subsection-header-bg.png) no-repeat center right;
+  background: #000 url(https://www.blackhat.com/images/subsection-header-bg.png) no-repeat center right;
   background-size: cover;
   border: 1px solid #6acdec;
   margin: 0 0 20px 0;
@@ -1740,8 +1740,8 @@ a.price-box-inactive br {
 }
 /* SecTor variant for non-event pages, like ../html/tracks-sector.html */
 .subsection-header.sector {
-  background-image: url(../images/venues/sector_cityscape_bwr1.jpg);
-  background-image: url(../images/backgrounds/sector-b.jpg);
+  background-image: url(https://www.blackhat.com/images/venues/sector_cityscape_bwr1.jpg);
+  background-image: url(https://www.blackhat.com/images/backgrounds/sector-b.jpg);
   border-color: #777;
 }
 .subsection-header.sector:hover {
@@ -2101,7 +2101,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Financial */
 .top-industries .financial header {
   background-color: #2cc9e8;
-  background-image: url(../images/icons/financial.png);
+  background-image: url(https://www.blackhat.com/images/icons/financial.png);
 }
 .top-industries .financial ul li::before {
   color: #2cc9e8;
@@ -2109,7 +2109,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Government */
 .top-industries .government header {
   background-color: #00c257;
-  background-image: url(../images/icons/government.png);
+  background-image: url(https://www.blackhat.com/images/icons/government.png);
 }
 .top-industries .government ul li::before {
   color: #00c257;
@@ -2117,7 +2117,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Healthcare */
 .top-industries .healthcare header {
   background-color: #941681;
-  background-image: url(../images/icons/healthcare.png);
+  background-image: url(https://www.blackhat.com/images/icons/healthcare.png);
 }
 .top-industries .healthcare ul li::before {
   color: #941681;
@@ -2125,7 +2125,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Manufacturer */
 .top-industries .manufacturer header {
   background-color: #9168b4;
-  background-image: url(../images/icons/manufacturer.png);
+  background-image: url(https://www.blackhat.com/images/icons/manufacturer.png);
 }
 .top-industries .manufacturer ul li::before {
   color: #9168b4;
@@ -2133,7 +2133,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Military */
 .top-industries .military header {
   background-color: #f9a61a;
-  background-image: url(../images/icons/military.png);
+  background-image: url(https://www.blackhat.com/images/icons/military.png);
 }
 .top-industries .military ul li::before {
   color: #f9a61a;
@@ -2141,7 +2141,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Security */
 .top-industries .security header {
   background-color: #008194;
-  background-image: url(../images/icons/security.png);
+  background-image: url(https://www.blackhat.com/images/icons/security.png);
 }
 .top-industries .security ul li::before {
   color: #008194;
@@ -2149,7 +2149,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Telecom */
 .top-industries .telecom header {
   background-color: #676767;
-  background-image: url(../images/icons/telecom.png);
+  background-image: url(https://www.blackhat.com/images/icons/telecom.png);
 }
 .top-industries .telecom ul li::before {
   color: #676767;
@@ -2157,7 +2157,7 @@ ul.chart-legend li.teal::before {
 /* Top Industries - Transportation */
 .top-industries .transportation header {
   background-color: #672f90;
-  background-image: url(../images/icons/transportation.png);
+  background-image: url(https://www.blackhat.com/images/icons/transportation.png);
 }
 .top-industries .transportation ul li::before {
   color: #672f90;
@@ -2305,11 +2305,11 @@ ul.chart-legend li.teal::before {
   visibility: hidden;
 }
 .turnbuckle_plus.img {
-  background: url('../images/turnbuckle-plus.png') no-repeat top left;
+  background: url('https://www.blackhat.com/images/turnbuckle-plus.png') no-repeat top left;
   padding-bottom: 1px;
 }
 .turnbuckle_plus.img.selected {
-  background: url('../images/turnbuckle-minus.png') no-repeat top left;
+  background: url('https://www.blackhat.com/images/turnbuckle-minus.png') no-repeat top left;
 }
 table.exhibitorList img.social-icon {
   display: inline-block;
@@ -2432,22 +2432,22 @@ main .social-icon:hover:before {
   opacity: 1;
 }
 main .social-icon.facebook {
-  background-image: url(../images/icons/facebook.png);
+  background-image: url(https://www.blackhat.com/images/icons/facebook.png);
 }
 main .social-icon.flickr {
-  background-image: url(../images/icons/flickr.png);
+  background-image: url(https://www.blackhat.com/images/icons/flickr.png);
 }
 main .social-icon.linkedin {
-  background-image: url(../images/icons/linkedin.png);
+  background-image: url(https://www.blackhat.com/images/icons/linkedin.png);
 }
 main .social-icon.twitter {
-  background-image: url(../images/icons/twitter.png);
+  background-image: url(https://www.blackhat.com/images/icons/twitter.png);
 }
 main .social-icon.youtube {
-  background-image: url(../images/icons/youtube.png);
+  background-image: url(https://www.blackhat.com/images/icons/youtube.png);
 }
 main .social-icon.x {
-  background-image: url(../images/icons/x.png);
+  background-image: url(https://www.blackhat.com/images/icons/x.png);
 }
 
 /* EU cookie law container.  Inserted into pages via /js/scripts.js */
@@ -2974,7 +2974,7 @@ main > div.container:last-child::after {
     outline: none;
   }
   #top-bar li.nav-item a.nav-link .home {
-    background: url(../images/page-graphics/home.png) no-repeat center center;
+    background: url(https://www.blackhat.com/images/page-graphics/home.png) no-repeat center center;
     background-size: cover;
     content: ' ';
     display: block;
@@ -3016,7 +3016,7 @@ main > div.container:last-child::after {
   }
   #main-menu li.nav-item a.nav-link {
     background: #000;
-    background: rgba(0,0,0,.8) url(../images/main-menu/main-nav-parent-link-bg.png) no-repeat center center;
+    background: rgba(0,0,0,.8) url(https://www.blackhat.com/images/main-menu/main-nav-parent-link-bg.png) no-repeat center center;
     border-top: 1px solid #777;
     border-bottom: 1px solid #777;
     border-left: 1px solid #777;
@@ -3039,7 +3039,7 @@ main > div.container:last-child::after {
   #main-menu li.nav-item a.nav-link:focus,
   #main-menu li.nav-item a.nav-link:hover {
     background: #10374b;
-    background: rgba(16,55,75,.9) url(../images/main-menu/main-nav-parent-link-bg-active.png) no-repeat center 25px;
+    background: rgba(16,55,75,.9) url(https://www.blackhat.com/images/main-menu/main-nav-parent-link-bg-active.png) no-repeat center 25px;
     position: relative;
   }
 
@@ -3281,7 +3281,7 @@ main .carousel .carousel-inner .carousel-item .carousel-caption p .more:hover {
   text-decoration: underline;
 }
 main .carousel .carousel-inner .carousel-item .carousel-caption p .more:after {
-  background: url('../images/slides/arrow_right_black.png') no-repeat right center;
+  background: url('https://www.blackhat.com/images/slides/arrow_right_black.png') no-repeat right center;
   content: ' ';
   display: block;
   height: 13px;
