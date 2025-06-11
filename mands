@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>M&S | Your Style, Your Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoXAmF0fW7gBfD8UvV+3+J8XmB/Lp8/QjP7q9z9p4g+q" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .hero-section {
+            background-color: #f0e6e6;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .hero-section h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .hero-section p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 250px; /* Consistent height for product images */
+            object-fit: cover;
+        }
+        .product-card h3 {
+            font-size: 1.3em;
+            margin: 15px 0 10px;
+            color: #333;
+        }
+        .product-card p {
+            color: #777;
+            padding: 0 15px 15px;
+        }
+        .product-card .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .btn-mns-primary {
+            background-color: #005A31; /* M&S Green */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .btn-mns-primary:hover {
+            background-color: #004d2a;
+            color: white; /* Keep text white on hover */
+        }
+        .profile-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #005A31;
+        }
+        .profile-card h2 {
+            color: #005A31;
+            margin-bottom: 10px;
+        }
+        .profile-card p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .personalized-recommendations {
+            margin: 40px 20px;
+            padding: 30px;
+            background-color: #e0f2f0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Marks_%26_Spencer_logo.svg/1200px-Marks_%26_Spencer_logo.svg.png" alt="M&S Logo">
+            M&S
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Offers</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    {{#if isAuthenticated}}
+                        <a class="nav-link" href="/account"><i class="fas fa-user"></i> My Account</a>
+                    {{else}}
+                        <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Sign In / Register</a>
+                    {{/if}}
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/basket"><i class="fas fa-shopping-basket"></i> Basket</a></li>
+                {{#if isAuthenticated}}
+                    <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+
+    <div id="app">
+        <div class="hero-section">
+            {{#if isAuthenticated}}
+                <h1>Welcome back, {{user.name}}!</h1>
+                <p>Explore your personalized recommendations and latest arrivals.</p>
+                <a href="/my-orders" class="btn btn-mns-primary">View My Orders</a>
+            {{else}}
+                <h1>Shop the Latest Trends at M&S</h1>
+                <p>Discover quality clothing, stylish home goods, and delicious food.</p>
+                <a href="/register" class="btn btn-mns-primary">Join M&S Sparks Today</a>
+            {{/if}}
+        </div>
+
+        {{#if isAuthenticated}}
+            <div class="profile-card">
+                <img src="{{user.picture}}" alt="User Profile Picture" />
+                <h2>Hello, {{user.name}}!</h2>
+                <p><strong>Email:</strong> {{user.email}}</p>
+                <p><strong>Membership Tier:</strong> {{user.membershipTier}}</p>
+                <p>Manage your details and preferences in your account.</p>
+                <a href="/account/settings" class="btn btn-mns-primary">Account Settings</a>
+            </div>
+
+            <div class="personalized-recommendations">
+                <h2>Your Personalized Recommendations</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/C8A2C8/FFFFFF?text=Personalized+Dress" alt="Personalized Dress">
+                        <h3>Floral Midi Dress</h3>
+                        <p class="price">£45.00</p>
+                        <a href="#" class="btn btn-mns-primary">Shop Now</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/8A2BE2/FFFFFF?text=Personalized+Jeans" alt="Personalized Jeans">
+                        <h3>High-Waisted Jeans</h3>
+                        <p class="price">£35.00</p>
+                        <a href="#" class="btn btn-mns-primary">Shop Now</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x250/ADD8E6/FFFFFF?text=Personalized+Shirt" alt="Personalized Shirt">
+                        <h3>Men's Casual Shirt</h3>
+                        <p class="price">£28.00</p>
+                        <a href="#" class="btn btn-mns-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+
+        <div class="container mt-5">
+            <h2>{{#if isAuthenticated}}Browse More Products{{else}}Our Top Picks{{/if}}</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/FFDAB9/000000?text=Product+1" alt="Product 1">
+                    <h3>Classic T-Shirt</h3>
+                    <p class="price">£12.50</p>
+                    <a href="#" class="btn btn-mns-primary">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/DDA0DD/000000?text=Product+2" alt="Product 2">
+                    <h3>Luxury Bath Towels</h3>
+                    <p class="price">£22.00</p>
+                    <a href="#" class="btn btn-mns-primary">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/F0F8FF/000000?text=Product+3" alt="Product 3">
+                    <h3>Organic Coffee Blend</h3>
+                    <p class="price">£8.99</p>
+                    <a href="#" class="btn btn-mns-primary">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/FFFACD/000000?text=Product+4" alt="Product 4">
+                    <h3>Kids' Denim Jacket</h3>
+                    <p class="price">£29.00</p>
+                    <a href="#" class="btn btn-mns-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Marks & Spencer plc. All Rights Reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms & Conditions</a> |
+            <a href="#">Accessibility</a> |
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6jIEaFf/20qzl5s+FzofTvYfRsMId/5I7z5/5B5Yx+f/eP7M3z9p4g/d+M" crossorigin="anonymous"></script>
+</body>
+</html>
